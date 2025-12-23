@@ -53,8 +53,8 @@
             display-name = "NAV";
 
             // ----------------------------------------------------------------------------------------------------------
-            // |  -  |  -      |  -    |  -     |  -      |  -  |  -  |          |  -    |  PAGE_UP  |  HOME  |  ⬆     |  END    |  INSERT     |  -  |
-            // |  -  |  SUPER  |  ALT  |  CTRL  |  SHIFT  |  -  |  -  |          |  -    |  PAGE_DN  |  ⬅     |  ⬇     |  ➡     |  CAPS LOCK  |  -  |
+            // |  -  |  -      |  -    |  -     |  -      |  -  |  -  |          |  -    |  PAGE_UP  |  HOME  |  UP    |  END    |  INSERT     |  -  |
+            // |  -  |  SUPER  |  ALT  |  CTRL  |  SHIFT  |  -  |  -  |          |  -    |  PAGE_DN  |  LEFT  |  DOWN  |  RIGHT  |  CAPS LOCK  |  -  |
             // |  -  |  -      |  -    |  -     |  -      |  -  |                        |  UNDO     |  CUT   |  COPY  |  PASTE  |  REDO       |  -  |
             //
             //                                  |  -      |  -  |  -  |          |  RET  |  BSPC     |  DEL   |
@@ -77,9 +77,9 @@
             display-name = "MOUSE";
 
             // ----------------------------------------------------------------------------------------------------------
-            // |  -  |  -      |  -    |  -     |  -      |  -  |  -  |          |  -    |  ⇑     |  ⇐   |  ⬆     |  ⇒     |  INSERT     |  -  |
-            // |  -  |  SUPER  |  ALT  |  CTRL  |  SHIFT  |  -  |  -  |          |  -    |  ⇓     |  ⬅    |  ⬇    |  ➡      |  CAPS LOCK  |  -  |
-            // |  -  |  -      |  -    |  -     |  -      |  -  |                        |  UNDO  |  CUT  |  COPY  |  PASTE  |  REDO       |  -  |
+            // |  -  |  -      |  -    |  -     |  -      |  -  |  -  |          |  -    |  SCRL_UP    |  SCRL_LEFT  |  UP    |  SCRL_RIGHT  |  INSERT     |  -  |
+            // |  -  |  SUPER  |  ALT  |  CTRL  |  SHIFT  |  -  |  -  |          |  -    |  SCRL_DOWN  |  LEFT       |  DOWN  |  RIGHT       |  CAPS LOCK  |  -  |
+            // |  -  |  -      |  -    |  -     |  -      |  -  |                        |  UNDO       |  CUT        |  COPY  |  PASTE       |  REDO       |  -  |
             //
             //                                  |  -      |  -  |  -  |          |  RIGHT  |  LEFT  |  MIDDLE  |
             // ----------------------------------------------------------------------------------------------------------
