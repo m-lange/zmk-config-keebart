@@ -8,12 +8,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/behaviors.h>
 #include <dt-bindings/zmk/pointing.h>
 
 
 #include "lang_de.h"
 
-#include "home_row.dtsi"
+#include "custom_behaviors.dtsi"
 
 
 
@@ -31,7 +32,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "QWERTY";
+            display-name = "Base Layer";
 
             // ----------------------------------------------------------------------------------------------------------
             // | Caps Word |  Q  |  W  |  E  |  R  |  T  |  -  |          |  -  |  Z  |  U  |  I   |  O   |  P   |  Ü   |
@@ -54,16 +55,64 @@
         };
 
 
-        nav_layer {
-            display-name = "NAV";
+        num_layer {
+            display-name = "Num Layer";
 
             // ----------------------------------------------------------------------------------------------------------
+            // |  -  |  -  |  7  |  8  |  9  |  -  |  -  |          |  -  |  -  |  -      |  -     |  -    |  -      |  -  |
+            // |  -  |  -  |  4  |  5  |  6  |  -  |  -  |          |  -  |  -  |  SHIFT  |  CTRL  |  ALT  |  SUPER  |  -  |
+            // |  -  |  -  |  1  |  2  |  3  |  -  |                      |  -  |  -      |  -     |  -    |  -      |  -  |
+            //
+            //                         |  -  |  -  |  -  |          |  -  |  -  |  -  |
+            // ----------------------------------------------------------------------------------------------------------
+
+
+            bindings = <
+
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+
+                                                &trans  &trans  &trans          &trans  &trans  &trans
+            >;
+
+        };     
+
+
+        sym_layer {
+            display-name = "Sym Layer";
+
+            // ----------------------------------------------------------------------------------------------------------
+            // |  -  |  -  |  -  |  -  |  -  |  -  |  -  |          |  -  |  -  |  -      |  -     |  -    |  -      |  -  |
+            // |  -  |  -  |  -  |  -  |  -  |  -  |  -  |          |  -  |  -  |  SHIFT  |  CTRL  |  ALT  |  SUPER  |  -  |
+            // |  -  |  -  |  -  |  -  |  -  |  -  |                      |  -  |  -      |  -     |  -    |  -      |  -  |
+            //
+            //                         |  -  |  -  |  -  |          |  -  |  -  |  -  |
+            // ----------------------------------------------------------------------------------------------------------
+
+
+            bindings = <
+
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+
+                                                &trans  &trans  &trans          &trans  &trans  &trans
+            >;
+
+        };  
+
+
+        nav_layer {
+            display-name = "Nav Layer";
+
+            // ---------------------------------------------------------------------------------------------------------------------------------------
             // |  -  |  -      |  -    |  -     |  -      |  -  |  -  |          |  -    |  PAGE_UP  |  HOME  |  UP    |  END    |  INSERT     |  -  |
             // |  -  |  SUPER  |  ALT  |  CTRL  |  SHIFT  |  -  |  -  |          |  -    |  PAGE_DN  |  LEFT  |  DOWN  |  RIGHT  |  CAPS LOCK  |  -  |
             // |  -  |  -      |  -    |  -     |  -      |  -  |                        |  UNDO     |  CUT   |  COPY  |  PASTE  |  REDO       |  -  |
             //
             //                                  |  -      |  -  |  -  |          |  RET  |  BSPC     |  DEL   |
-            // ----------------------------------------------------------------------------------------------------------
+            // ---------------------------------------------------------------------------------------------------------------------------------------
 
 
             bindings = <
@@ -79,15 +128,15 @@
 
 
         mouse_layer {
-            display-name = "MOUSE";
+            display-name = "Mouse Layer";
 
-            // ----------------------------------------------------------------------------------------------------------
+            // ---------------------------------------------------------------------------------------------------------------------------------------------------
             // |  -  |  -      |  -    |  -     |  -      |  -  |  -  |          |  -    |  SCRL_UP    |  SCRL_LEFT  |  UP    |  SCRL_RIGHT  |  INSERT     |  -  |
             // |  -  |  SUPER  |  ALT  |  CTRL  |  SHIFT  |  -  |  -  |          |  -    |  SCRL_DOWN  |  LEFT       |  DOWN  |  RIGHT       |  CAPS LOCK  |  -  |
             // |  -  |  -      |  -    |  -     |  -      |  -  |                        |  UNDO       |  CUT        |  COPY  |  PASTE       |  REDO       |  -  |
             //
             //                                  |  -      |  -  |  -  |          |  RIGHT  |  LEFT  |  MIDDLE  |
-            // ----------------------------------------------------------------------------------------------------------
+            // ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 
             bindings = <
