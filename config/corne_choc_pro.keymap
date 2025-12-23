@@ -11,7 +11,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 
-#include <lang/de.h>
+#include "lang_de.h"
+
 
 #define QWERTY 0
 
