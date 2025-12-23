@@ -13,6 +13,9 @@
 
 #include "lang_de.h"
 
+#include "home_row.dtsi"
+
+
 
 #define QWERTY 0
 
@@ -33,6 +36,7 @@
             // ----------------------------------------------------------------------------------------------------------
             // | Caps Word |  Q  |  W  |  E  |  R  |  T  |  -  |          |  -  |  Z  |  U  |  I   |  O   |  P   |  Ü   |
             // | SHIFT     |  A  |  S  |  D  |  F  |  G  |  -  |          |  -  |  H  |  J  |  K   |  L   |  Ö   |  Ä   |
+            //               WIN   ALT   CTRL  SHFT                                     SHFT  CTRL   ALT    WIN
             // | CTRL      |  Y  |  X  |  C  |  V  |  B  |                      |  N  |  M  |  ,;  |  .:  |  -_  |  ß?  |
             //
             //                       |  ESC  |  SPACE  |  TAB  |          |  RET  |  BSPC  |  DEL  |
@@ -40,11 +44,11 @@
 
 
             bindings = <
-                &caps_word  &kp Q  &kp W  &kp E  &kp R  &kp T  &trans          &trans  &kp Y  &kp U  &kp I      &kp O    &kp P      &kp DE_UE
-                &kp LSHFT   &kp A  &kp S  &kp D  &kp F  &kp G  &trans          &trans  &kp H  &kp J  &kp K      &kp L    &kp DE_OE  &kp DE_AE
-                &kp LCTRL   &kp Z  &kp X  &kp C  &kp V  &kp B                          &kp N  &kp M  &kp COMMA  &kp DOT  &kp MINUS  &kp DE_SZ
+                &caps_word  &kp Q        &kp W        &kp E         &kp R         &kp T  &trans          &trans  &kp Y  &kp U         &kp I         &kp O        &kp P            &kp DE_UE
+                &kp LSHFT   &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G  &trans          &trans  &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RWIN DE_OE  &kp DE_AE
+                &kp LCTRL   &kp Z        &kp X        &kp C         &kp V         &kp B                          &kp N  &kp M         &kp COMMA     &kp DOT      &kp MINUS        &kp DE_SZ
 
-                                          &kp ESC  &kp SPACE  &kp TAB          &kp RET  &kp BSPC  &kp DEL
+                                                                    &kp ESC  &kp SPACE  &kp TAB          &kp RET  &kp BSPC  &kp DEL
             >;
 
         };
